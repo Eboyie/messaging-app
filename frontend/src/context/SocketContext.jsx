@@ -16,7 +16,7 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = oi('http://localhost:5001', {
+      const socket = oi('https://mesap-me.onrender.com', {
         query: { userId: authUser._id },
       });
 
