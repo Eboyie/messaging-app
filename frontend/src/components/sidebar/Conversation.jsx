@@ -11,13 +11,13 @@ const Conversation = ({ conversation, emoji, lastIdx }) => {
   return (
     <>
       <div
-        className={`flex gap-2 items-center hover:bg-cyan-500 rounded px-2 py-1 cursor-pointer ${
+        className={`flex gap-2 items-center hover:bg-cyan-500 rounded-full px-2 py-1 cursor-pointer ${
           isSelected && 'bg-cyan-500'
         }`}
         onClick={() => setSelectedConversation(conversation)}
       >
         <div className={`avatar ${isOnline ? 'online' : ''}`}>
-          <div className="w-12 rounded-full">
+          <div className="w-10 sm:w-12 rounded-full">
             <img src={conversation.profilePic} alt="user avatar" />
           </div>
         </div>
@@ -25,7 +25,7 @@ const Conversation = ({ conversation, emoji, lastIdx }) => {
         <div className="flex flex-col flex-1">
           <div className="flex gap-3 justify-between">
             <p className="font-bold text-gray-200">{conversation.fullName}</p>
-            <span className="text-xl">{emoji}</span>
+            <span className="hidden md:block text-xl">{emoji}</span>
           </div>
         </div>
       </div>
