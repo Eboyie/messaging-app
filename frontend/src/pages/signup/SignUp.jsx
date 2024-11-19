@@ -97,15 +97,10 @@ const SignUp = () => {
             onGenderChange={handleCheckboxChange}
             selectedGender={inputs.gender}
           />
-          <Link
-            to={'/login'}
-            className="text-sm hover:text-blue-600 hover:underline mt-2 inline-block"
-          >
-            Already have an account?
-          </Link>
+
           <div>
             <button
-              className="btn btn-block btn-sm mt-2 border-slate-700"
+              className="btn btn-block btn-sm mt-6 border-slate-700"
               disabled={loading}
             >
               {loading ? (
@@ -114,6 +109,15 @@ const SignUp = () => {
                 'Sign Up'
               )}
             </button>
+          </div>
+
+          <div>
+            <Link
+              to={'/login'}
+              className="text-sm hover:text-blue-600 hover:underline mt-2 inline-block"
+            >
+              Already have an account? <span className="font-bold">Login</span>
+            </Link>
           </div>
         </form>
       </div>

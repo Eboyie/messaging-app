@@ -59,13 +59,3 @@
     transform: translate3d(4px, 0, 0);
   }
 }
-
-/* 
-.bg-image {
-  background-image: url('./assets/image/bg_img.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-*/

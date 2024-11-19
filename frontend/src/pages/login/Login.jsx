@@ -48,20 +48,24 @@ const Login = () => {
             />
           </div>
 
-          <Link
-            to={'/signup'}
-            className="text-sm hover:text-blue-600 hover:underline inline-block"
-          >
-            {"Don't"} have an account?
-          </Link>
           <div>
-            <button className="btn btn-block btn-sm mt-2" disabled={loading}>
+            <button className="btn btn-block btn-sm mt-6" disabled={loading}>
               {loading ? (
                 <span className="loading loading-spinner"></span>
               ) : (
                 'Login'
               )}
             </button>
+          </div>
+
+          <div>
+            <Link
+              to={'/signup'}
+              className="text-sm hover:text-blue-600 hover:underline mt-2 inline-block"
+            >
+              {"Don't"} have an account?{' '}
+              <span className="font-bold">Sign Up</span>
+            </Link>
           </div>
         </form>
       </div>
